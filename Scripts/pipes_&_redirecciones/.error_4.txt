@@ -1,0 +1,1 @@
+ls: cannot access './directorio_prueba': No such file or directory
