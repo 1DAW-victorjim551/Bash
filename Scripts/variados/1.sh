@@ -4,7 +4,7 @@ origen=$1
 destino=$2
 
 if [ $# -ne 2 ]; then
-  echo "Uso: $0 <origen> <destino>"
+  echo "Uso: $0 origen destino"
   exit 1
 fi
 
