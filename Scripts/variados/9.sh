@@ -8,3 +8,4 @@ else
   echo "Cambios detectados"
   cat diff.txt
 fi
+

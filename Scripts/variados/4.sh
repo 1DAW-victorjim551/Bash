@@ -6,6 +6,11 @@
   free -m
 } | tee informe.txt
 
-if df -h | awk '{print $5}' | grep -E '9[0-9]%'; then
-  echo "ALERTA DISCO" >> informe.txt
-fi
+df -h | awk 'NR>1 {gsub(/%/, "", $5); print $5}' | while read -r linea; do
+   if [[ $linea -gt 90 ]]; then
+    echo "ALERTA DISCO" >> "informe.txt"
+  fi
+  done 
+
+
+
